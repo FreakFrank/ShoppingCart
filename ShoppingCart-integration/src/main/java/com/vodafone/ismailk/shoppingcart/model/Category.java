@@ -1,6 +1,7 @@
-package com.vodafone.ismailk.shoppingcart.models;
+package com.vodafone.ismailk.shoppingcart.model;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -22,7 +23,8 @@ public class Category {
     @Column(name = "last_update")
     private Date lastUpdate;
 
-    @OneToMany(targetEntity=Product.class, mappedBy="category", fetch=FetchType.EAGER)
+    @JsonManagedReference
+    @OneToMany(targetEntity= Product.class, mappedBy="category", fetch=FetchType.EAGER)
     private List<Product> product;
 
 

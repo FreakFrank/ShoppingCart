@@ -1,6 +1,7 @@
-package com.vodafone.ismailk.shoppingcart.models;
+package com.vodafone.ismailk.shoppingcart.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -23,11 +24,6 @@ public class Product implements Serializable {
     private int quantity;
     private double price;
 
-//    @Lob
-//    @Type(type = "org.hibernate.type.BinaryType")
-//    @Transient
-//    private byte [] image2;
-
     @Transient
     private MultipartFile image;
 
@@ -35,6 +31,7 @@ public class Product implements Serializable {
 
     @ManyToOne(optional = false, targetEntity = Category.class)
     @JoinColumn(name = "category_id", referencedColumnName = "category_id")
+    @JsonBackReference
     private Category category;
 
 }

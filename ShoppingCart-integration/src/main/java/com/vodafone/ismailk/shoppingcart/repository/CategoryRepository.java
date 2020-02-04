@@ -1,6 +1,6 @@
 package com.vodafone.ismailk.shoppingcart.repository;
 
-import com.vodafone.ismailk.shoppingcart.models.Category;
+import com.vodafone.ismailk.shoppingcart.model.Category;
 import org.springframework.data.repository.CrudRepository;
 
 

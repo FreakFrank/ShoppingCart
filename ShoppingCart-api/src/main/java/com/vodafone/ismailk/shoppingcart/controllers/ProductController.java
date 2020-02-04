@@ -2,8 +2,8 @@ package com.vodafone.ismailk.shoppingcart.controllers;
 
 
 
-import com.vodafone.ismailk.shoppingcart.model.Product;
-import com.vodafone.ismailk.shoppingcart.service.ProductService;
+import com.vodafone.ismailk.shoppingcart.model.ServiceProduct;
+import com.vodafone.ismailk.shoppingcart.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,14 +17,13 @@ public class ProductController {
 
 
     @GetMapping("getAllProducts")
-    public List<Product> getAllProducts(){
-        return null;
-        //return productService.getAllProducts();
+    public List<ServiceProduct> getAllProducts(){
+        return productService.getAllProducts();
     }
 
 
     @PostMapping(value ="addProduct")
-    public void addProduct(@ModelAttribute Product product){
+    public void addProduct(@ModelAttribute ServiceProduct product){
         productService.save(product);
     }
 
