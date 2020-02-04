@@ -5,8 +5,8 @@
 
     <persistence-unit name="punit">
 
-        <class>com.whatever.ShoppingCart.models.Category</class>
-        <class>com.whatever.ShoppingCart.models.Product</class>
+        <class>com.whatever.ShoppingCart.com.vodafone.ismailk.shoppingcart.models.Category</class>
+        <class>com.vodafone.ismailk.shoppingcart.models.Product</class>
 
         <properties>
             <property name = "javax.persistence.jdbc.url" value = "jdbc:mysql://localhost:3306/shoppingapp"/>

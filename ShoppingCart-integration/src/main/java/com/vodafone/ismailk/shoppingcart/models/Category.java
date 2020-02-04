@@ -1,4 +1,4 @@
-package com.whatever.ShoppingCart.models;
+package com.vodafone.ismailk.shoppingcart.models;
 
 
 import lombok.Data;
@@ -14,11 +14,16 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long category_id;
-    private String name;
-    private Date last_update;
+    @Column(name = "category_id")
+    private Long categoryID;
 
-    @OneToMany(targetEntity=Product.class, mappedBy="product_id", fetch=FetchType.EAGER)
+    private String name;
+
+    @Column(name = "last_update")
+    private Date lastUpdate;
+
+    @OneToMany(targetEntity=Product.class, mappedBy="category", fetch=FetchType.EAGER)
     private List<Product> product;
+
 
 }
