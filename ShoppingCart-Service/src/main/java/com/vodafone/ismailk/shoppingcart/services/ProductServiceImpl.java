@@ -32,10 +32,10 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void save(ServiceProduct product) {
+    public ServiceProduct save(ServiceProduct product) {
 
         Product product1 = MappingObject.getInstance().map(product, Product.class);
-        productRepository.save(product1);
+        return MappingObject.getInstance().map(productRepository.save(product1), ServiceProduct.class);
 
     }
 

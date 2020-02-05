@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface CategoryService {
 
-    void save(ServiceCategory repoServiceCategory);
+    ServiceCategory save(ServiceCategory repoServiceCategory);
 
     List<ServiceCategory> getAllCategories();
 

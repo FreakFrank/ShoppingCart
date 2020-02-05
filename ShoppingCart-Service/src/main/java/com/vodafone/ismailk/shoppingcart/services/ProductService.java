@@ -10,5 +10,5 @@ public interface ProductService {
 
     List<ServiceProduct> getAllProducts();
 
-    void save(ServiceProduct product);
+    ServiceProduct save(ServiceProduct product);
 }
