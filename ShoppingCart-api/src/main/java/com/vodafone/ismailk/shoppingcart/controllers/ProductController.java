@@ -1,7 +1,5 @@
 package com.vodafone.ismailk.shoppingcart.controllers;
 
-
-
 import com.vodafone.ismailk.shoppingcart.model.ServiceProduct;
 import com.vodafone.ismailk.shoppingcart.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +18,6 @@ public class ProductController {
     public List<ServiceProduct> getAllProducts(){
         return productService.getAllProducts();
     }
-
 
     @PostMapping(value ="addProduct")
     public void addProduct(@ModelAttribute ServiceProduct product){

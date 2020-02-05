@@ -1,4 +1,4 @@
-package com.whatever.ShoppingCart;
+package com.vodafone.ismailk.shoppingcart;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -22,7 +22,7 @@ public class ShoppingCartApplicationTests {
 
 	@Test
 	public void shouldReturnDefaultMessage() throws Exception {
-		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hello, World")));
+		this.mockMvc.perform(get("/getAllCategories")).andDo(print()).andExpect(status().isOk());
+
 	}
 }
