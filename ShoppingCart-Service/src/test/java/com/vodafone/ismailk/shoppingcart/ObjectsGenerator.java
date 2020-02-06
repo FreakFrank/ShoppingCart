@@ -19,9 +19,9 @@ public class ObjectsGenerator {
         category.setLastUpdate(new Date());
         category.setName("Motos");
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
             categoryList.add(category);
-        }
+
 
         return categoryList;
     }
@@ -34,9 +34,9 @@ public class ObjectsGenerator {
         product.setCode("The product");
         product.setDescription("The most amazing product");
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
             productList.add(product);
-        }
+
 
         return productList;
 
@@ -44,6 +44,7 @@ public class ObjectsGenerator {
 
     public static ServiceCategory generateOneCategory(){
         ServiceCategory category = new ServiceCategory();
+
         category.setCategoryID(1l);
         category.setLastUpdate(new Date());
         category.setName("Motos");
@@ -53,9 +54,11 @@ public class ObjectsGenerator {
 
     public static ServiceProduct gerateOneProduct(){
         ServiceProduct product = new ServiceProduct();
+
         product.setCategory(new Category());
         product.setCode("The product");
         product.setDescription("The most amazing product");
+
         return product;
     }
 

@@ -19,13 +19,12 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ServiceProduct> getAllProducts() {
 
-       List<Product> products = (List<Product>) productRepository.findAll();
+        List<Product> products = (List<Product>) productRepository.findAll();
 
-       List<ServiceProduct> serviceProducts = new ArrayList<>();
+        List<ServiceProduct> serviceProducts = new ArrayList<>();
 
-        for (Product product : products) {
-            serviceProducts.add(MappingObject.getInstance().map(product, ServiceProduct.class));
-        }
+        products.forEach(product ->
+                serviceProducts.add(MappingObject.getInstance().map(product, ServiceProduct.class)));
 
         return serviceProducts;
 

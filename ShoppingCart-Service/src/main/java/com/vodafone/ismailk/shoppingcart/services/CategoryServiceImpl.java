@@ -33,9 +33,8 @@ public class CategoryServiceImpl implements CategoryService {
         List<ServiceCategory> categories = new ArrayList<>();
         List<Category> all = (List<Category>) categoryRepository.findAll();
 
-        for (Category category : all) {
-            categories.add(MappingObject.getInstance().map(category, ServiceCategory.class));
-        }
+        all.forEach(category ->
+                categories.add(MappingObject.getInstance().map(category, ServiceCategory.class)));
 
         return categories;
     }

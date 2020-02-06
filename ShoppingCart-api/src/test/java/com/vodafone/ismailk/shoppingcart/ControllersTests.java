@@ -38,10 +38,6 @@ public class ControllersTests {
     @Test
     public void addCategory(){
 
-//        MockHttpServletRequest mockHttpServletRequest = new MockHttpServletRequest();
-//
-//        RequestContextHolder.setRequestAttributes(new ServletRequestAttributes(mockHttpServletRequest));
-
         ServiceCategory serviceCategory = ObjectsGenerator.generateOneCategory();
 
         when(categoryService.save(serviceCategory)).thenReturn(serviceCategory);
